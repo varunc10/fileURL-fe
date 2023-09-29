@@ -77,7 +77,7 @@ function FileUpload() {
   return (
     <div className="App">
       <input type="file" onChange={handleFileChange} className="custom-file-upload"/>
-      <button onClick={handleUpload}>Upload</button>
+      <Button type="primary" onClick={handleUpload}>Upload</Button>
       {shortLink && (
         <div className="link">
           <h3>
@@ -85,7 +85,9 @@ function FileUpload() {
           </h3>
         </div>
       )}
-      <Button type="primary" onClick={() => navigate('/fileDisplay')}>Display All Files</Button>
+      <div className="all-files-btn">
+        <Button type="primary" onClick={() => navigate('/fileDisplay')}>Display All Files</Button>
+      </div>
     </div>
   );
 }

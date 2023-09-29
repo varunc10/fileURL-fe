@@ -57,7 +57,7 @@ const FileDisplay = () => {
       dataIndex: 'shortLink',
       key: 'shortLink',
       render: (text) => (
-        <a href={text} target="_blank" rel="noopener noreferrer">
+        <a href={text}>
           {text}
         </a>
       ),
@@ -67,7 +67,7 @@ const FileDisplay = () => {
       key: 'actions',
       render: (_, record) => (
         <Space size="middle">
-          <Button type="link" href={record.shortLink} target="_blank" rel="noopener noreferrer">
+          <Button type="link" href={record.shortLink}>
             Download
           </Button>
           <Popconfirm
