@@ -11,6 +11,8 @@ This web application provides an intuitive interface to interact with our backen
   - [Usage](#usage)
     - [Login](#login)
     - [Register](#register)
+    - [FileUpload](#file-upload)
+    - [FileDisplay](#file-display)
   - [Authentication](#authentication)
   - [Features](#features)
   - [Deployment](#deployment)
