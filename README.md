@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+## Frontend App for file uploading and short url generation service
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application provides an intuitive interface to interact with our backend service, allowing you to upload and manage files and manage them seamlessly.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+  - [Technologies Used](#technologies-used)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [Usage](#usage)
+    - [Login](#login)
+    - [Register](#register)
+  - [Authentication](#authentication)
+  - [Features](#features)
+  - [Deployment](#deployment)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- Ant Design for UI components
+- Fetch API for handling HTTP requests
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Before you begin, ensure you have met the following requirements:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Node.js and npm installed on your development machine.
+Access to the backend service API. Make sure the backend service is up and running.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started with this frontend application, follow these steps: git clone https://github.com/varunc10/fileURL-fe
 
-### `npm run eject`
+Change to the project directory: cd file-short-url
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Install the project dependencies: npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Login
 
-## Learn More
+To access the login page, navigate to /login. Here, you can log in with your existing account by providing your username and password. Upon successful login, you will be redirected to the file upload page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Register
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To access the register page, navigate to /register. Here, you can create a new account by providing a unique username and a secure password. After registering, you can log in using your newly created account.
 
-### Code Splitting
+### FileUpload
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The FileUpload page allows you to easily upload various types of files, including CSV, DOCX, HTML, images (JPG, JPEG, PNG), PDF, plain text (TXT), presentations (PPT, PPTX), and spreadsheets (XLS, XLSX). Follow these steps to use the FileUpload feature:
 
-### Analyzing the Bundle Size
+1. Click the "Choose File" button to select a file from your local device.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Ensure the selected file meets the following criteria:
+   - File type is one of the allowed types.
+   - File size does not exceed the maximum allowed size.
 
-### Making a Progressive Web App
+3. After selecting a valid file, click the "Upload" button to initiate the file upload process.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. If the upload is successful, you will receive a short link to access the uploaded file.
 
-### Advanced Configuration
+### FileDisplay
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The FileDisplay page provides a convenient way to manage and view all your uploaded files. Here's how you can use the FileDisplay feature:
 
-### Deployment
+1. Navigate to the FileDisplay page by clicking the "Display All Files" button on the FileUpload page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. On the FileDisplay page, you will see a table displaying your uploaded files. The table includes the following columns:
+   - File Name: The name of the uploaded file.
+   - File Type: The type of the uploaded file.
+   - Short Link: A clickable short link to access the file.
 
-### `npm run build` fails to minify
+3. You can perform the following actions for each file listed:
+   - Click the "Download" link to download the file to your device.
+   - Click the "Delete" button to delete the file from your storage. A confirmation prompt will appear before deletion.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. The FileDisplay page provides a convenient overview of all your uploaded files, making it easy to access and manage them.
+
+Authentication
+
+This frontend app uses a secure authentication method, ensuring the privacy and security of your account. It communicates with the backend service for user authentication, and users can create new accounts or log in with existing ones.
+
+## Features
+
+File Upload: Easily upload files of various types, including CSV, DOCX, HTML, images (JPG, JPEG, PNG), PDF, plain text (TXT), presentations (PPT, PPTX), and spreadsheets (XLS, XLSX).
+File Management: View a list of your uploaded files, including file names, types, and short links.
+File Deletion: Delete files you no longer need with a simple click.
+
+## Deployment
+
+Hosted the frontend codebase on Vercel.
